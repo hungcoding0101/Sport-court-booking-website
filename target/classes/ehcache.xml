@@ -1,0 +1,44 @@
+<ehcache>
+ <diskStore path="java.io.tmpdir"/>
+ 
+  <defaultCache
+	 maxEntriesLocalHeap="10000"
+	 eternal="false"
+	 statistics="true"
+	 timeToIdleSeconds="120"
+	 timeToLiveSeconds="120"
+	 maxEntriesLocalDisk="10000000"
+	 diskExpiryThreadIntervalSeconds="120"
+	 memoryStoreEvictionPolicy="LRU">
+	 <persistence strategy="localTempSwap"/>
+ </defaultCache>
+ 
+<cache name="SimplePageCachingFilter"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="true"
+           overflowToDisk="true"
+           timeToIdleSeconds="7200"
+           timeToLiveSeconds="7200"
+           memoryStoreEvictionPolicy="LFU"
+            />
+            
+    <cache name="SimplePageFragmentCachingFilter"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           overflowToDisk="true"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+            />
+      
+      <cache name="player"
+	      	maxElementsInMemory="10000"
+	      	eternal="false"
+	      	statistics="true"
+	      	timeToIdleSeconds="1200"
+           timeToLiveSeconds="1200" 
+           overflowToDisk="true"/>
+           
+</ehcache>

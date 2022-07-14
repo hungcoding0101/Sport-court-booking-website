@@ -1,0 +1,33 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../main/config/ehcache.xsd">
+    <cache name="SimplePageCachingFilter"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           overflowToDisk="true"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+            />
+            
+    <cache name="SimplePageFragmentCachingFilter"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           overflowToDisk="true"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+            />
+      
+      <cache name="player"
+	      	maxElementsInMemory="10000"
+	      	eternal="false"
+	      	timeToIdleSeconds="600"
+           timeToLiveSeconds="7200" 
+           overflowToDisk="true"/>
+      
+      />
+         
+            
+</ehcache>
